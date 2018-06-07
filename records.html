@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Undeviating 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140322
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<span class="icon icon-cog"></span>
+			<h1><a href="#">S.O.S.</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="#" accesskey="1" title="">Events</a></li>
+				<li><a href="#" accesskey="2" title="">Homepage</a></li>
+				<li><a href="#" accesskey="3" title="">About Us</a></li>
+				<li><a href="#" accesskey="4" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="welcome" class="container">
+    	
+    	<p>Referesh the page to see updates</p>
+	<h1>Event Records</h1>
+	<h4 id="size"></h4>
+	<ul id="mylist">
+		<li>END</li>
+	</ul>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		//this script allows the webpage to see prvious alert records
+  var config = {
+    apiKey: "AIzaSyBQznFgjTh9q9tIync2n_50lJmU32EM3fw",
+    authDomain: "sos-app-2d496.firebaseapp.com",
+    databaseURL: "https://sos-app-2d496.firebaseio.com",
+    projectId: "sos-app-2d496",
+    storageBucket: "sos-app-2d496.appspot.com",
+    messagingSenderId: "409314875954"
+  };
+  firebase.initializeApp(config);
+  //getting the records
+  var listRecords = []
+//this diplays all the events
+ var databse = firebase.database().ref('alert');//alertRecord ///eventRecord
+  databse.on('value', function(snapshot) {
+             document.getElementById("size").innerHTML = "Total Records is " + snapshot.numChildren();
+
+   snapshot.forEach(function(child){
+   //	document.getElementById("list").innerHTML = child.val();
+       //listRecords.push(child.val());
+
+         var temp = document.createElement("LI");
+         var r = document.createTextNode(child.val());
+         temp.appendChild(r);
+         var list = document.getElementById("mylist");
+          list.insertBefore(temp, list.childNodes[0]);
+                    //list.insertBefore(temp, list.childNodes[0]);
+
+       //   document.body.appendChild(temp);*/
+   });
+  });
+
+</script>
+ <hr/>
+
+</body>
+
+
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+	<ul class="contact">
+	</ul>
+</div>
+</body>
+</html>
