@@ -90,7 +90,7 @@
 						 var events77 = [];
 
              var floorEvents = [];
-             var _eventType = [];
+             var _eventType;
              var top = 0;
              var databaseRef = firebase.database().ref('webvar');
 
@@ -218,8 +218,8 @@
 
                    });
 
-
-                   _eventType.push(floorEvents[0]);
+									 	_eventType = floorEvents[0];
+                   /*_eventType.push(floorEvents[0]);
                    _eventType.push(floorEvents[13]);
                    _eventType.push(floorEvents[26]);
                    _eventType.push(floorEvents[39]);
@@ -258,7 +258,7 @@
                    _eventType.push(floorEvents[13*36]);
                    _eventType.push(floorEvents[13*37]);
                    _eventType.push(floorEvents[13*38]);
-                   _eventType.push(floorEvents[13*39]);
+                   _eventType.push(floorEvents[13*39]);*/ //used for displaying multiple events
 					});
 
             function hasNumbers(t)
@@ -330,6 +330,8 @@
            var visibleLayers = [];
 
 	      // alert(_floorLevel);
+
+				switch ()
 
 		   if(_floorLevel == "Floor 1")
            {
@@ -413,46 +415,46 @@
 
 
                jsonString = jsonString.locations;
-							 if(_eventType[0] == "SHOOTING")
+							 if(_eventType == "SHOOTING")
 							 {
                picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/shooting.png', 70, 70);
 						   }
-							 else if(_eventType[0] == "FIRE")
+							 else if(_eventType == "FIRE")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/fireicon.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "BOMB")
+							 else if(_eventType == "BOMB")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/bomb.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "INTRUDER")
+							 else if(_eventType == "INTRUDER")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/intrudericon.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "STALKING")
+							 else if(_eventType == "STALKING")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/stalking.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "TORNATO")
+							 else if(_eventType == "TORNADO")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/tornatoicon.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "TERRORIST")
+							 else if(_eventType == "TERRORIST")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/terrorist.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "FIGHTING")
+							 else if(_eventType == "FIGHTING")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/fightingicon.png', 70, 70);
 
 							 }
-							 else if(_eventType[0] == "BIOHAZARD")
+							 else if(_eventType == "BIOHAZARD")
 							 {
 								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/biohazardicon.png', 70, 70);
 							 }

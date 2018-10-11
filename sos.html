@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Create Map and add a dynamic layer</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.26/esri/css/esri.css"/>
+    <style>
+      html, body, #mapDiv{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+    </style>
+    <script src="https://js.arcgis.com/3.26/"></script>
+    <script>
+      var map;
+
+      require([
+        "esri/map",
+        "esri/layers/ArcGISDynamicMapServiceLayer",
+        "esri/layers/ImageParameters"
+      ], function (
+        Map, ArcGISDynamicMapServiceLayer, ImageParameters) {
+
+        map = new Map("mapDiv", {center: [ -117.323929,34.182640],
+          zoom: 19,
+        basemap: "topo"
+        });
+
+
+    //34.182640, -117.323929
+
+        var imageParameters = new ImageParameters();
+        imageParameters.format = "jpeg"; //set the image type to PNG24, note default is PNG8.
+
+        //Takes a URL to a non cached map service.
+        var dynamicMapServiceLayer = new ArcGISDynamicMapServiceLayer("http://coyotequest.cse.csusb.edu:6080/arcgis/rest/services/CampusMapVersion0/MapServer", {
+          "opacity" : 0.5,
+          "imageParameters" : imageParameters
+        });
+        //layers
+        var visibleLayers = [];
+        visibleLayers.push(41);
+        visibleLayers.push(8);
+        visibleLayers.push(42);
+       dynamicMapServiceLayer.setVisibleLayers(visibleLayers);
+
+        map.addLayer(dynamicMapServiceLayer);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="mapDiv"></div>
+  </body>
+</html>
+ 
