@@ -1,33 +1,16 @@
+<!DOCTYPE html>
+<html>
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-
-Name       : Undeviating 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20140322
-
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
+    <title>Custom Markers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 </head>
-<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-
 <body>
 <div id="header-wrapper">
 	<div id="header" class="container">
@@ -37,75 +20,488 @@ Released   : 20140322
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="active"><a href="records.html" accesskey="1" title="">Events</a></li>
-				<li><a href="index.html" accesskey="2" title="">Homepage</a></li>
+				<li class="active"><a href="index.html" accesskey="1" title="">Homepage</a></li>
+				<li><a href="records.html" accesskey="2" title="">Events</a></li>
 				<li><a href="aboutEvents.html" accesskey="3" title="">About Events</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
-<div class="wrapper">
-	<div id="welcome" class="container">
-    	
-    	<p>Referesh the page to see updates</p>
-	<h1>Event Records</h1>
-	<h4 id="size"></h4>
-	<ul id="mylist">
-		<li>END</li>
-	</ul>
+      <link rel="stylesheet" href="https://js.arcgis.com/3.26/esri/css/esri.css"/>
+
+ <style>
+      html, body, #mapDiv{
+        padding: 10;
+        margin: 10;
+        height: 90%;
+      }
+    </style>
+
 </head>
+
 <body>
-	
-	<script type="text/javascript">
-		//this script allows the webpage to see prvious alert records
-  var config = {
-    apiKey: "AIzaSyBQznFgjTh9q9tIync2n_50lJmU32EM3fw",
-    authDomain: "sos-app-2d496.firebaseapp.com",
-    databaseURL: "https://sos-app-2d496.firebaseio.com",
-    projectId: "sos-app-2d496",
-    storageBucket: "sos-app-2d496.appspot.com",
-    messagingSenderId: "409314875954"
-  };
-  firebase.initializeApp(config);
-  //getting the records
-  var listRecords = []
-//this diplays all the events
- var databse = firebase.database().ref('alert');//alertRecord ///eventRecord
-  databse.on('value', function(snapshot) {
-             document.getElementById("size").innerHTML = "Total Records is " + snapshot.numChildren();
 
-   snapshot.forEach(function(child){
-   //	document.getElementById("list").innerHTML = child.val();
-       //listRecords.push(child.val());
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 
-         var temp = document.createElement("LI");
-         var r = document.createTextNode(child.val());
-         temp.appendChild(r);
-         var list = document.getElementById("mylist");
-          list.insertBefore(temp, list.childNodes[0]);
-                    //list.insertBefore(temp, list.childNodes[0]);
-
-       //   document.body.appendChild(temp);*/
-   });
-  });
-
-</script>
- <hr/>
+    <h1>Event Records</h1>
+    <h4 id="size"></h4>
+    <ul id="mylist">
+        <li>END</li>
+    </ul>
 
 
-<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="California State University San Bernardino-Copy" src="//www.arcgis.com/apps/Embed/index.html?webmap=886cb989403a4d049fbcaeba1bf0511c&extent=-117.3239,34.1796,-117.3179,34.1822&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&details=true&legend=true&active_panel=details&basemap_gallery=true&disable_scroll=true&theme=dark"></iframe></div>
+    <hr>
+
+           <h1>Chat Records</h1>
+      		<h4 id="size"></h4>
+       		 <ul id="mylist2">
+            <li>END</li>
+        </ul>
+
+        <h1>Campus Map</h1>
+
+
+  <script src="https://js.arcgis.com/3.26/"></script>
+        <script type="text/javascript">
+            //this script allows the webpage to see prvious alert records
+              var config = {
+                apiKey: "AIzaSyBQznFgjTh9q9tIync2n_50lJmU32EM3fw",
+                authDomain: "sos-app-2d496.firebaseapp.com",
+                databaseURL: "https://sos-app-2d496.firebaseio.com",
+                projectId: "sos-app-2d496",
+                storageBucket: "sos-app-2d496.appspot.com",
+                messagingSenderId: "409314875954"
+              };
+              firebase.initializeApp(config);
+              //getting the records
+              var listRecords = [];
+              var lat = [];
+              var lng = [];
+              var _floorLevel;
+
+
+            //this diplays all the events
+             var databse = firebase.database().ref('chat_data');//chatRecord
+
+          ////////-----********////////-----********
+          ////////-----********////////-----********
+             var events = [];
+						 var events77 = [];
+
+             var floorEvents = [];
+             var _eventType = [];
+             var top = 0;
+             var databaseRef = firebase.database().ref('webvar');
+
+             console.log("before attaching listener");
+             databaseRef.on('child_added', function(snapshot7) {
+               var event = snapshot7.val();
+
+             event = event.split(" ");
+             var stringArray = new Array();
+             for(var i =0; i < event.length; i++){
+                 stringArray.push();
+                 events.push(event[i]);
+                 console.log(events[i] + " Is events[i] " + i + " is i value");
+                 var remainder = i % 2;
+                if(remainder != 0)//index i we are on is odd..
+                {
+                  //lat = String(event[i]); //this is used if lat is a single string not stringArray.
+                  lat.push(event[i]);//used with lat string array
+                  //alert(lat[i] + "is lat #: " + i);
+                  top += 1;
+                }else //event
+                {
+                  //lng = String(event[i]);//this is used if lat is a single string not stringArray.
+                  lng.push(event[i]);//used with lng string array
+
+                }
+
+                 if(i != event.length-1){
+                     stringArray.push(" ");
+                 }
+             }
+
+
+               // add the event to the UI
+              var elm = document.createElement('li');
+              elm.id = 'event-'+snapshot7.key;
+              //document.querySelector('#mylist').appendChild(elm);
+//--------*START WEBFLOOR
+var databaseReffloor = firebase.database().ref('webfloor');
+
+databaseReffloor.on('child_added', function(snapshot77) {
+	var event = snapshot77.val();
+		_floorLevel = event;
+
+	// add the event to the UI
+ elm.id = 'event-'+snapshot7.key;
+
+////------***END WEBFLOOR
+
+
+            	//alert(top);
+				makeMap(lat,lng,top);
+
+               console.log("in listener callback");
+             });
+             console.log("after attaching listener");
+
+///eventRecord
+              databse.once('value', function(snapshot) {
+                      //   document.getElementById("size").innerHTML = "Total Chat Records is " + snapshot.numChildren();
+
+               snapshot.forEach(function(child){
+
+                            child.forEach(function (snapshot2) {
+                          var val = snapshot2.val();
+                              var temp = document.createElement("LI");
+
+                         	if (hasNumbers(snapshot2.val()) == true) {
+                                                        //alert('number Mane');
+                              }else if (hasNumbers(snapshot2.val()) == false){
+                                              var r = document.createTextNode(snapshot2.val());
+
+                                           		temp.appendChild(r);
+
+                      			}
+                              var list = document.getElementById("mylist2");
+                              hasNumbers(list.childNodes[0])
+
+                              if (hasNumbers(list.childNodes[0]) == true) {
+                                  //alert('number');
+                              }else if (hasNumbers(list.childNodes[0]) == false){
+                              	list.insertBefore(temp, list.childNodes[0]);
+                                //alert(list.childNodes[0]);
+                      			}
+            				});
+
+                  });
+
+              });
+
+                   var databse2 = firebase.database().ref('alert');//alertRecord ///eventRecord
+                  databse2.on('value', function(snapshot) {
+                             document.getElementById("size").innerHTML = "Total Records is " + snapshot.numChildren();
+
+                   snapshot.forEach(function(child){
+                   //	document.getElementById("list").innerHTML = child.val();
+                       //listRecords.push(child.val());
+
+                         var temp = document.createElement("LI");
+                         var r = document.createTextNode(child.val());
+                         coord = child.val();
+                         temp.appendChild(r);
+                         var list2 = document.getElementById("mylist");
+                          list2.insertBefore(temp, list2.childNodes[0]);
+
+     /////----*****start test
+
+             var event = child.val();
+
+             event = event.split(" ");
+             var stringArray2 = new Array();
+             for(var i =0; i < event.length; i++){
+                 stringArray2.push();
+                 floorEvents.push(event[i]);
+
+
+
+                 if(i != event.length-1){
+                     stringArray2.push(" ");
+                 }
+             }
+           floorEvents[8] = floorEvents[8].replace(/\D/g,'');
+            floorEvents[8] = floorEvents[8].charAt(0);
+			//_floorLevel.push(floorEvents[8]);//set floor level
+
+
+                   });
+
+                  /* alert(floorEvents[0]);
+                   alert(floorEvents[13]);
+                   alert(floorEvents[26]);
+                   alert(floorEvents[39]);
+                   alert(floorEvents[52]);
+                   alert(floorEvents[65]);
+                   alert(floorEvents[78]);
+                   alert(floorEvents[91]);
+                   alert(floorEvents[104]);
+                   alert(floorEvents[117]);
+                   alert(floorEvents[130]);
+                   alert(floorEvents[143]);
+                   alert(floorEvents[156]);
+                   alert(floorEvents[169]);
+                   alert(floorEvents[182]);
+                   alert(floorEvents[195]);
+                   alert(floorEvents[208]);
+                   alert(floorEvents[221]);
+                   alert(floorEvents[234]);
+                   alert(floorEvents[247]);
+                   alert(floorEvents[260]);
+                   alert(floorEvents[13*21]);
+                   alert(floorEvents[13*22]);
+                   alert(floorEvents[13*23]);
+                   alert(floorEvents[13*24]);
+                   alert(floorEvents[13*25]);
+                   alert(floorEvents[13*26]);
+                   alert(floorEvents[13*27]);
+                   alert(floorEvents[13*28]);
+                   alert(floorEvents[13*29]);
+                   alert(floorEvents[13*30]);
+                   alert(floorEvents[13*31]);
+                   alert(floorEvents[13*32]);
+                   alert(floorEvents[13*33]);
+                   alert(floorEvents[13*34]);
+                   alert(floorEvents[13*35]);
+                   alert(floorEvents[13*36]);
+                   alert(floorEvents[13*37]);
+                   alert(floorEvents[13*38]);
+                   alert(floorEvents[13*39]); */
+                   _eventType.push(floorEvents[0]);
+                   _eventType.push(floorEvents[13]);
+                   _eventType.push(floorEvents[26]);
+                   _eventType.push(floorEvents[39]);
+                   _eventType.push(floorEvents[52]);
+                   _eventType.push(floorEvents[65]);
+                   _eventType.push(floorEvents[78]);
+                   _eventType.push(floorEvents[91]);
+                   _eventType.push(floorEvents[104]);
+                   _eventType.push(floorEvents[117]);
+                   _eventType.push(floorEvents[130]);
+                   _eventType.push(floorEvents[143]);
+                   _eventType.push(floorEvents[156]);
+                   _eventType.push(floorEvents[169]);
+                   _eventType.push(floorEvents[182]);
+                   _eventType.push(floorEvents[195]);
+                   _eventType.push(floorEvents[208]);
+                   _eventType.push(floorEvents[221]);
+                   _eventType.push(floorEvents[234]);
+                   _eventType.push(floorEvents[247]);
+                   _eventType.push(floorEvents[260]);
+                   _eventType.push(floorEvents[13*21]);
+                   _eventType.push(floorEvents[13*22]);
+                   _eventType.push(floorEvents[13*23]);
+                   _eventType.push(floorEvents[13*24]);
+                   _eventType.push(floorEvents[13*25]);
+                   _eventType.push(floorEvents[13*26]);
+                   _eventType.push(floorEvents[13*27]);
+                   _eventType.push(floorEvents[13*28]);
+                   _eventType.push(floorEvents[13*29]);
+                   _eventType.push(floorEvents[13*30]);
+                   _eventType.push(floorEvents[13*31]);
+                   _eventType.push(floorEvents[13*32]);
+                   _eventType.push(floorEvents[13*33]);
+                   _eventType.push(floorEvents[13*34]);
+                   _eventType.push(floorEvents[13*35]);
+                   _eventType.push(floorEvents[13*36]);
+                   _eventType.push(floorEvents[13*37]);
+                   _eventType.push(floorEvents[13*38]);
+                   _eventType.push(floorEvents[13*39]);
+					});
+
+            function hasNumbers(t)
+            {
+            var regex = /\d/g;
+            return regex.test(t);
+            }
+
+		function makeMap(lat,lng,top)
+        {
+
+
+         var map, textSymbol, picSymbol;
+
+         require([
+           "esri/map",
+           "esri/layers/ArcGISDynamicMapServiceLayer",
+           "esri/layers/ImageParameters",
+     "esri/graphic",
+
+     "esri/symbols/PictureMarkerSymbol",
+
+     "esri/symbols/TextSymbol",
+
+     "esri/geometry/Point",
+
+     "esri/SpatialReference",
+
+     "esri/tasks/ProjectParameters",
+
+     "esri/tasks/GeometryService",
+
+     "dojo/on",
+
+     "dojo/domReady!"
+         ],
+
+
+         function (
+           Map, ArcGISDynamicMapServiceLayer, ImageParameters, Graphic, PictureMarkerSymbol, TextSymbol, Point, SpatialReference, ProjectParameters, GeometryService, on) {
 
 
 
 
 
-</body>
+             sR = new SpatialReference(4326);
 
 
-<div id="copyright">
-	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-	<ul class="contact">
-	</ul>
-</div>
-</body>
+           map = new Map("mapDiv", {
+          center: [ lat[0],lng[0]],
+             zoom: 19,
+           basemap: "topo"
+           });
+
+
+         var imageParameters = new ImageParameters();
+         imageParameters.format = "jpeg"; //set the image type to PNG24, note default is PNG8.
+           var textSym = new TextSymbol("Hello World");
+
+
+         //  var pictureMarkerSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/shooting.png', 51, 51);
+
+           //Takes a URL to a non cached map service.
+           var dynamicMapServiceLayer = new ArcGISDynamicMapServiceLayer("http://coyotequest.cse.csusb.edu:6080/arcgis/rest/services/CampusMapVersion0/MapServer", {
+             "opacity" : 0.7,
+             "imageParameters" : imageParameters
+           });
+           //layers
+           var visibleLayers = [];
+
+	       alert(_floorLevel[0]);
+
+		   if(_floorLevel == "Floor 1")
+           {
+               visibleLayers.push(41);
+               visibleLayers.push(8);
+               visibleLayers.push(42);
+           }
+           else if (_floorLevel == "Floor 2")
+           {
+               visibleLayers.push(6);
+               visibleLayers.push(39);
+               visibleLayers.push(40);
+           }
+            else if (_floorLevel == "Floor 3")
+           {
+               visibleLayers.push(4);
+               visibleLayers.push(37);
+               visibleLayers.push(38);
+           }
+            else if (_floorLevel == "Floor 4")
+           {
+
+               visibleLayers.push(2);
+               visibleLayers.push(35);
+               visibleLayers.push(36);
+           }
+            else if (_floorLevel == "Floor 5")
+           {
+               visibleLayers.push(0);
+               visibleLayers.push(33);
+               visibleLayers.push(34);
+           }
+           else // push floor 1
+           {
+               visibleLayers.push(41);
+               visibleLayers.push(8);
+               visibleLayers.push(42);
+           }
+
+
+
+			//Push additional Info..
+			visibleLayers.push(14);//Bike
+			visibleLayers.push(15);//Permit
+			visibleLayers.push(16);//info
+			visibleLayers.push(17);//shuttle
+			visibleLayers.push(18);//restroom
+			visibleLayers.push(19);//emergency phone
+			visibleLayers.push(20);//chargins station
+			visibleLayers.push(21);//health center
+			//visibleLayers.push(22);//ATM
+			visibleLayers.push(23);//crowd
+			visibleLayers.push(24); //Evac site
+			visibleLayers.push(25);
+
+
+          dynamicMapServiceLayer.setVisibleLayers(visibleLayers);
+
+           map.addLayer(dynamicMapServiceLayer);
+
+
+          // Modules required:
+   // esri/symbols/PictureMarkerSymbol
+
+   var geoService = new GeometryService("http://sampleserver6.arcgisonline.com/arcgis/rest/services/Utilities/Geometry/GeometryServer");
+
+
+	//	alert(lat[0] + " is lat 0 in map function"); //lets us see the value here.
+/*		alert(lat[1] + " is lat 1 in map function"); //lets us see the value here.
+		alert(lat[2] + " is lat 2 in map function"); //lets us see the value here.
+		alert(lat[3] + " is lat 3 in map function"); //lets us see the value here.
+*/
+	//	alert(lng[0] + " is lng 0 in map function"); //lets us see the value here.
+/*		alert(lng[1] + " is lng 1 in map function"); //lets us see the value here.
+		alert(lng[2] + " is lng 2 in map function"); //lets us see the value here.
+		alert(lng[3] + " is lng 3 in map function"); //lets us see the value here.
+*/
+
+             var jsonString = { locations: [{ latitude: lng[0], longitude: lat[0]}, { latitude: lng[1], longitude: lat[1]}, { latitude: lng[2], longitude: lat[2]}, { latitude: lng[3], longitude: lat[2]}, { latitude: lng[4], longitude: lat[4]}, { latitude: lng[5], longitude: lat[5]}, { latitude: lng[6], longitude: lat[6]}, { latitude: lng[7], longitude: lat[7]}, { latitude: lng[8], longitude: lat[8]}, { latitude: lng[9], longitude: lat[9]}, { latitude: lng[10], longitude: lat[10]}, { latitude: lng[11], longitude: lat[11]}, { latitude: lng[12], longitude: lat[12]}, { latitude: lng[13], longitude: lat[13]}, { latitude: lng[14], longitude: lat[14]}, { latitude: lng[15], longitude: lat[15]}, { latitude: lng[16], longitude: lat[16]}, { latitude: lng[17], longitude: lat[17]}, { latitude: lng[18], longitude: lat[18]}, { latitude: lng[19], longitude: lat[19]}, { latitude: lng[20], longitude: lat[20]}, { latitude: lng[21], longitude: lat[21]}]};//lng and lat maybe flipped
+
+
+
+               jsonString = jsonString.locations;
+
+               picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/shooting.png', 70, 70);
+               userSymbol = new PictureMarkerSymbol('http://rs908.pbsrc.com/albums/ac288/chefjphell/dot.gif~c200', 10, 10);
+
+     map.on("load", function(evt) {
+
+     for (var i = 0; i < jsonString.length; i++) {
+
+     var geometryPoint = new Point(jsonString[i].longitude, jsonString[i].latitude, sR);
+
+     textSymbol = new TextSymbol(jsonString[i].textToDisplayOnThePictureMarkerSymbol).setOffset(0, -4);
+
+     var params = new ProjectParameters();
+
+     params.geometries = [geometryPoint];
+
+     params.outSR = map.spatialReference;
+
+     geoService.project(params, function(point) {
+
+     map.graphics.add(new Graphic(point[0], picSymbol));
+
+     map.graphics.add(new Graphic(point[0], userSymbol));
+
+     map.graphics.add(new Graphic(point[0], textSymbol));
+
+     });
+
+     }
+
+     });
+
+
+
+     map.on("click", function(evt) {console.log(evt.mapPoint);});
+
+         });
+
+}//end function makeMap()
+
+       </script>
+       <div id="mapDiv"></div>
+
+
+
+
+
+        <hr/>
+
+
+    </body>
+
 </html>
