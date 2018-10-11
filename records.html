@@ -127,17 +127,7 @@
               var elm = document.createElement('li');
               elm.id = 'event-'+snapshot7.key;
               //document.querySelector('#mylist').appendChild(elm);
-//--------*START WEBFLOOR
-var databaseReffloor = firebase.database().ref('webfloor');
 
-databaseReffloor.on('child_added', function(snapshot77) {
-	var event = snapshot77.val();
-		_floorLevel = event;
-
-	// add the event to the UI
- elm.id = 'event-'+snapshot7.key;
-
-////------***END WEBFLOOR
 
 
             	//alert(top);
@@ -146,6 +136,15 @@ databaseReffloor.on('child_added', function(snapshot77) {
                console.log("in listener callback");
              });
              console.log("after attaching listener");
+
+						 //--------*START WEBFLOOR
+						 var databaseReffloor = firebase.database().ref('webfloor');
+
+						 databaseReffloor.on('child_added', function(snapshot77) {
+						 	var event = snapshot77.val();
+						 		_floorLevel = event;
+						 }
+						 ////------***END WEBFLOOR
 
 ///eventRecord
               databse.once('value', function(snapshot) {
@@ -218,46 +217,7 @@ databaseReffloor.on('child_added', function(snapshot77) {
 
                    });
 
-                  /* alert(floorEvents[0]);
-                   alert(floorEvents[13]);
-                   alert(floorEvents[26]);
-                   alert(floorEvents[39]);
-                   alert(floorEvents[52]);
-                   alert(floorEvents[65]);
-                   alert(floorEvents[78]);
-                   alert(floorEvents[91]);
-                   alert(floorEvents[104]);
-                   alert(floorEvents[117]);
-                   alert(floorEvents[130]);
-                   alert(floorEvents[143]);
-                   alert(floorEvents[156]);
-                   alert(floorEvents[169]);
-                   alert(floorEvents[182]);
-                   alert(floorEvents[195]);
-                   alert(floorEvents[208]);
-                   alert(floorEvents[221]);
-                   alert(floorEvents[234]);
-                   alert(floorEvents[247]);
-                   alert(floorEvents[260]);
-                   alert(floorEvents[13*21]);
-                   alert(floorEvents[13*22]);
-                   alert(floorEvents[13*23]);
-                   alert(floorEvents[13*24]);
-                   alert(floorEvents[13*25]);
-                   alert(floorEvents[13*26]);
-                   alert(floorEvents[13*27]);
-                   alert(floorEvents[13*28]);
-                   alert(floorEvents[13*29]);
-                   alert(floorEvents[13*30]);
-                   alert(floorEvents[13*31]);
-                   alert(floorEvents[13*32]);
-                   alert(floorEvents[13*33]);
-                   alert(floorEvents[13*34]);
-                   alert(floorEvents[13*35]);
-                   alert(floorEvents[13*36]);
-                   alert(floorEvents[13*37]);
-                   alert(floorEvents[13*38]);
-                   alert(floorEvents[13*39]); */
+
                    _eventType.push(floorEvents[0]);
                    _eventType.push(floorEvents[13]);
                    _eventType.push(floorEvents[26]);
