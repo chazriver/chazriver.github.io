@@ -412,8 +412,55 @@
 
 
                jsonString = jsonString.locations;
-
+							 if(_event == "SHOOTING")
+							 {
                picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/shooting.png', 70, 70);
+						   }
+							 else if(_event == "FIRE")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/fireicon.png', 70, 70);
+
+							 }
+							 else if(_event == "BOMB")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/bomb.png', 70, 70);
+
+							 }
+							 else if(_event == "INTRUDER")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/intrudericon.png', 70, 70);
+
+							 }
+							 else if(_event == "STALKING")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/stalking.png', 70, 70);
+
+							 }
+							 else if(_event == "TORNATO")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/tornatoicon.png', 70, 70);
+
+							 }
+							 else if(_event == "TERRORIST")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/terrorist.png', 70, 70);
+
+							 }
+							 else if(_event == "FIGHTING")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/fightingicon.png', 70, 70);
+
+							 }
+							 else if(_event == "BIOHAZARD")
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/biohazardicon.png', 70, 70);
+							 }
+							 else
+							 {
+								 picSymbol = new PictureMarkerSymbol('https://chazriver.github.io/images/alarmicon.png', 70, 70);
+							 }
+
+
                userSymbol = new PictureMarkerSymbol('http://rs908.pbsrc.com/albums/ac288/chefjphell/dot.gif~c200', 10, 10);
 
      map.on("load", function(evt) {
