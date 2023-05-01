@@ -1,17 +1,11 @@
-# NAPTheDev's Portfolio
+# Chaz Hampton's Portfolio
 
 My personal portfolio
 
-<p align="center">
-  <img alt="Stars" src="https://badgen.net/github/stars/napthedev/portfolio-next">
-  <img alt="Forks" src="https://badgen.net/github/forks/napthedev/portfolio-next">
-  <img alt="Issues" src="https://badgen.net/github/issues/napthedev/portfolio-next">
-  <img alt="Commits" src="https://badgen.net/github/commits/napthedev/portfolio-next">
-</p>
 
 ## Live demo
 
-Official Website: [https://napthedev.com](https://napthedev.com)
+Official Website: [https://google.com](https://google.com)
 
 ## Main technology used
 
@@ -29,21 +23,10 @@ Official Website: [https://napthedev.com](https://napthedev.com)
 
 ```env
 NEXT_PUBLIC_GA_ID=
-NEXT_PUBLIC_FORM_URL=
+NEXT_PUBLIC_FORM_URL=https://data.endpoint.space/clh49vqqo000008lddvcr9orw
 ```
 
 - NEXT_PUBLIC_GA_ID: Google Analytics
 - NEXT_PUBLIC_FORM_URL: Form to submit contact info ([endpoint.space](https://www.endpoint.space/) recommended)
 
 - Run `npm run dev`
-
-## Previews
-
-![Preview 1](https://res.cloudinary.com/naptest/image/upload/v1654580156/portfolio-next/preview-1_is2ner.png)
-![Preview 2](https://res.cloudinary.com/naptest/image/upload/v1654580156/portfolio-next/preview-2_ux6bh9.png)
-![Preview 3](https://res.cloudinary.com/naptest/image/upload/v1654580157/portfolio-next/preview-3_clnabt.png)
-![Preview 4](https://res.cloudinary.com/naptest/image/upload/v1654580156/portfolio-next/preview-4_zwp5ae.png)
-
-## Summary
-
-👉 If you like this project, give it a star ✨ and share 👨🏻‍💻 it to your friends 👈
