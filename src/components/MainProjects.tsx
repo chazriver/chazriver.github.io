@@ -202,15 +202,6 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
             </div>
 
             <div className="flex mt-[25px] gap-[20px]">
-                <a
-                href={"https://chazriver.github.io./records.html"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-[45px] px-[15px] text-white rounded transition duration-300 flex items-center gap-[10px] bg-[#1876d2] hover:bg-[#2884e0]"
-              >
-                <BiLinkExternal size={25} />
-                <span> Link </span>
-              </a>
             </div>
           </div>
         </div>
