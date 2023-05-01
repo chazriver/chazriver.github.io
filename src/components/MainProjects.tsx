@@ -27,7 +27,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
               <div className="border-black border-[8px]">
                 <img
                   className="w-full h-auto rounded-[12px]"
-                  src="/bubbleIn_Mobile.png"//Project Image
+                  src="/BubbleIn_Mobile.png"//Project Image
                   alt=""
                 />
               </div>
