@@ -23,7 +23,7 @@ Official Website: [https://google.com](https://google.com)
 
 ```env
 NEXT_PUBLIC_GA_ID=
-NEXT_PUBLIC_FORM_URL=https://data.endpoint.space/clh49vqqo000008lddvcr9orw
+NEXT_PUBLIC_FORM_URL=
 ```
 
 - NEXT_PUBLIC_GA_ID: Google Analytics
