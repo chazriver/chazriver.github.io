@@ -30,7 +30,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
   
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://firebase.google.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -46,7 +46,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={2}
-            href={"https://www.google.com"}
+            href={"https://www.java.com/en/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -61,7 +61,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.swift.org/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -77,7 +77,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.python.org/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -93,7 +93,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://isocpp.org/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -109,7 +109,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.php.net/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -125,7 +125,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://react.dev/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -141,7 +141,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.typescriptlang.org/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -156,7 +156,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.mysql.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -171,7 +171,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.javascript.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -187,7 +187,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://www.nginx.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
@@ -203,7 +203,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
 
           <a
             key={1}
-            href={"https://www.google.com"}
+            href={"https://nextjs.org/"}
             target="_blank"
             rel="noopener noreferrer"
             className="item flex flex-col items-center justify-around group"
