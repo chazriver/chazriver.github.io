@@ -1,47 +1,3 @@
-/*
-import { FC } from "react";
-import { allDataType } from "../shared/types";
-
-interface SkillsProps {
-  skills: allDataType["skills"];
-}
-
-const Skills: FC<SkillsProps> = ({ skills }) => {
-  return (
-    <div>
-      <h1
-        data-scroll
-        data-scroll-direction="horizontal"
-        data-scroll-speed="-1"
-        className="text-center text-3xl lg:text-4xl"
-      >
-        Technologies and languages that I use
-      </h1>
-      <p
-        data-scroll
-        data-scroll-direction="horizontal"
-        data-scroll-speed="1"
-        className="description text-lg text-center my-[30px]"
-      >
-        
-      </p>
-      <div>
-
-      </div>
-    </div>
-  );
-};
-
-export default Skills;
-
-
-*/
-
-
-
-
- 
-
 import { FC } from "react";
 import { allDataType } from "../shared/types";
 
@@ -58,7 +14,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
         data-scroll-speed="-1"
         className="text-center text-3xl lg:text-4xl"
       >
-        My skills & Knowledge
+        Technologies and Languages
       </h1>
       <p
         data-scroll
@@ -66,7 +22,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
         data-scroll-speed="1"
         className="description text-lg text-center my-[30px]"
       >
-        Technologies and languages that I use
+        
       </p>
 
 
@@ -227,6 +183,39 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
             />
             <p className="text-center">{"Javascript"}</p>
           </a>
+
+
+          <a
+            key={1}
+            href={"https://www.google.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fnginx.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"Nginx"}</p>
+          </a>
+
+
+          <a
+            key={1}
+            href={"https://www.google.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fnext.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"Next.js"}</p>
+          </a>
+
 
 
 
