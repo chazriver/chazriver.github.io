@@ -1,7 +1,7 @@
 {
   "name": "chazriver.github.io",
   "version": "0.1.0",
-  "homepage": "http://chazriver.github.io/chazriver.github.io",
+  "homepage": "http://chazriver.github.io",
   "private": true,
   "scripts": {
     "dev": "next dev",
