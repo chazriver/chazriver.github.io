@@ -9,7 +9,7 @@ const SmallProjects: FC<SmallProjectsProps> = ({ projects }) => {
   return (
     <div className="flex justify-center mx-[5vw] mt-16">
       <div className="w-full max-w-[1100px]">
-        <h1 className="text-4xl text-center">Places I've worked</h1>
+        <h1 className="text-4xl text-center">Places I have worked</h1>
         <p className="mt-4 mb-10 text-gray-400 text-lg text-center">{``}</p>
 
 
