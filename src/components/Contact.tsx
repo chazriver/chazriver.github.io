@@ -15,7 +15,7 @@ const Contact: FC = () => {
         <div className="w-full max-w-[1100px] flex gap-10 flex-col md:flex-row">
           <div className="flex-1">
             <form
-              action={"https://data.endpoint.space/clh49vqqo000008lddvcr9orw"}
+              action={process.env.NEXT_PUBLIC_FORM_URL}
               method="POST"
               className="flex flex-col gap-2"
             >
