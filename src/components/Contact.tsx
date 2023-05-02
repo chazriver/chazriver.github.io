@@ -51,7 +51,7 @@ const Contact: FC = () => {
           </div>
           <div className="flex-1">
             <h1 className="text-xl mb-3">Other places</h1>
-            {socialLinks.map(() => (
+            
               <a
                 key={"Github"}
                 href={"https://github.com/chazriver"}
@@ -66,7 +66,23 @@ const Contact: FC = () => {
                 />
                 <h1>{"Github"}</h1>
               </a>
-            ))}
+
+              <a
+                key={"Linkedin"}
+                href={"https://www.linkedin.com/in/chazhampton/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-center hover:bg-slate-900 p-2 transition duration-300"
+              >
+                <img
+                  className="w-[30px] h-[30px] rounded-full"
+                  //src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fgit.svg&w=50&h=50"}
+                  src="/linkedin.png" width="100" height="100"
+                  alt=""
+                />
+                <h1>{"Linkedin"}</h1>
+              </a>
+            
           </div>
         </div>
       </div>
