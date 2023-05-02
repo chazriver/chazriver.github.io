@@ -216,8 +216,69 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
             <p className="text-center">{"Next.js"}</p>
           </a>
 
+          <a
+            key={1}
+            href={"https://kotlinlang.org/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fkotlin.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"Kotlin"}</p>
+          </a>
 
 
+
+          <a
+            key={1}
+            href={"https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fobjective-c.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"Objective-C"}</p>
+          </a>
+
+
+          <a
+            key={1}
+            href={"https://go.dev/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fgo.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"Go"}</p>
+          </a>
+
+
+          <a
+            key={1}
+            href={"https://learn.microsoft.com/en-us/dotnet/csharp/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fcsharp.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"C#"}</p>
+          </a>
 
 
       </div>
