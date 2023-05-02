@@ -120,7 +120,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
       
       
         <div
-          key={2}
+          key={1}
           className={`item flex gap-[20px] lg:gap-[50px] w-full px-[5vw] md:min-h-[60vh] mb-20 md:my-10 ${
             1 % 2 === 1
               ? "flex-col lg:flex-row"
@@ -167,7 +167,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
         <div
           key={2}
           className={`item flex gap-[20px] lg:gap-[50px] w-full px-[5vw] md:min-h-[60vh] mb-20 md:my-10 ${
-            1 % 2 === 1
+            2 % 2 === 1
               ? "flex-col lg:flex-row"
               : "flex-col lg:flex-row-reverse"
           }`}
@@ -209,9 +209,9 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
 
 
         <div
-          key={2}
+          key={1}
           className={`item flex gap-[20px] lg:gap-[50px] w-full px-[5vw] md:min-h-[60vh] mb-20 md:my-10 ${
-            2 % 2 === 1
+            1 % 2 === 1
               ? "flex-col lg:flex-row"
               : "flex-col lg:flex-row-reverse"
           }`}
