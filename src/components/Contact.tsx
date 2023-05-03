@@ -4,7 +4,7 @@ import { socialLinks } from "../shared/contants";
 const Contact: FC = () => {
   return (
     <div className="pb-20">
-      <h1 className="text-center text-4xl mt-14 md:mt-28 mb-10">
+      <h1 className="text-center text-4xl mt-14 md:mt-28 mb-10" id = "contactsection">
         Get in touch
       </h1>
       <div
