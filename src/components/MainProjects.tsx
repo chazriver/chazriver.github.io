@@ -10,7 +10,7 @@ interface MainProjectsProps {
 const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
   return (
     <>
-      <h1 className="text-center text-4xl mb-10 md:mb-20">My Work</h1>
+      <h1 className="text-center text-4xl mb-10 md:mb-20" id = "myworksection">My Work</h1>
 
 
       
