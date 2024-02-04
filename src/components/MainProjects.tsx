@@ -52,7 +52,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
                 className="h-[45px] px-[15px] text-white rounded transition duration-300 flex items-center gap-[10px] bg-[#1876d2] hover:bg-[#2884e0]"
               >
                 <BiLinkExternal size={25} />
-                <span> Link </span>
+                <span> Download Paper </span>
               </a>
             </div>
           </div>
