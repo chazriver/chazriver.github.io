@@ -49,7 +49,9 @@ const Intro: FC = () => {
           Chaz Hampton
         </h1>
         <br></br>
-        {`I'm a Software Engineer with expertise in mobile application and full-stack development.`}
+        {`Software Engineer`}
+        <br></br>
+        {`mobile application and full-stack development`}
       </m.p>
 
       <m.a
