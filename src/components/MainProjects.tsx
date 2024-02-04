@@ -37,7 +37,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
               {"Users have the flexibility to attach the ESP32-CAM to their privately owned drone or a comparable device, enabling manual flight over the designated observation area. This area is surveyed for silhouettes resembling that of a shark beneath the water."}
               <br></br>
               <br></br>
-              {"Emphasizing lightweight construction, affordability, and minimal computing resource requirements, these design considerations are crucial for ensuring that the system is not only accessible to the aver- age consumer but also practical to design and implement."}
+              {"Emphasizing lightweight construction, affordability, and minimal computing resource requirements, these design considerations are crucial for ensuring that the system is not only accessible to the average consumer but also practical to design and implement."}
             </p>
 
             <div className="flex gap-[5px]">
