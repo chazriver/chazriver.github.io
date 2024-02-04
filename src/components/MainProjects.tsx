@@ -83,9 +83,9 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
             </div>
           </div>
           <div className="item-info lg:flex-1">
-            <h1 className="text-3xl">{"Bubble In - Mobile App"}</h1>
+            <h1 className="text-3xl">{"Bubble In - Mobile Application"}</h1>
             <p className="text-[20px] text-justify my-3">
-              {"Bubble In is a moblile application on IOS and Android with anti-cheating features. This application consists of two code bases, one for IOS and the other Android."}
+              {"Bubble In, available on both IOS and Android, is a mobile application equipped with anti-cheating features. This application is structured with two distinct code bases, tailored to the specific requirements of IOS and Android platforms. The incorporation of anti-cheating mechanisms enhances the integrity and reliability of the application, ensuring a secure environment for users."}
             </p>
 
             <div className="flex gap-[5px]">
@@ -137,7 +137,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
           <div className="item-info lg:flex-1">
             <h1 className="text-3xl">{"Bubble In - Web Server"}</h1>
             <p className="text-[20px] text-justify my-3">
-              {"Bubble In web server hosted on the cloud build with a LEMP stack. The frontend of the website functions as a LMS for faculty."}
+              {"The Bubble In web server, hosted on the cloud, is constructed using a LEMP stack. The website's frontend serves as a Learning Management System (LMS) designed for faculty use. This cloud-based server provides a robust and efficient platform for managing educational content and facilitating faculty interactions."}
             </p>
 
             <div className="flex gap-[5px]">
@@ -188,9 +188,9 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
             </div>
           </div>
           <div className="item-info lg:flex-1">
-            <h1 className="text-3xl">{"SOS - Mobile App"}</h1>
+            <h1 className="text-3xl">{"SOS - Mobile Application"}</h1>
             <p className="text-[20px] text-justify my-3">
-              {"Developed in 2016, SOS or Save Our Souls is a mobile application developed for IOS and Android. The mobile application utilizes a custom ArcGIS map to provide precise location data in reported events."}
+              {"Introduced in 2016, SOS (Save Our Souls) is a mobile application tailored for both iOS and Android platforms. This app incorporates a personalized ArcGIS map, delivering accurate location data during reported events. The seamless integration of technology and design in SOS establishes a dependable and effective tool for users encountering emergencies."}
             </p>
 
             <div className="flex gap-[5px]">
@@ -235,7 +235,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
           <div className="item-info lg:flex-1">
             <h1 className="text-3xl">{"SOS - Web Server"}</h1>
             <p className="text-[20px] text-justify my-3">
-              {"A simple HTML, and JS web sever functioning as a record of alerts reported by users and monitored by emergency services."}
+              {"SOS Web Server is a straightforward implementation featuring HTML and JS, serving as a repository for alerts reported by users and monitored by emergency services. This minimalist web server facilitates the documentation and tracking of critical alerts, ensuring a streamlined and effective communication channel between users and emergency services."}
             </p>
 
             <div className="flex gap-[5px]">
@@ -277,9 +277,9 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
             </div>
           </div>
           <div className="item-info lg:flex-1">
-            <h1 className="text-3xl">{"Hospice Router - Android app"}</h1>
+            <h1 className="text-3xl">{"Hospice Router - Android Application"}</h1>
             <p className="text-[20px] text-justify my-3">
-              {"Hospice Router is an app designed to be used for hospice care. Once you create a new organization you are able to add new patients or customers to a database that is accessible by your organization's users. Once a new user has signed up under your new organization name, they will be shown a list of all available patients or customers which they will be able to click on and be routed to that location."}
+              {"Hospice Router is a purpose-built app tailored for hospice care. Upon establishing a new organization, users gain the ability to seamlessly populate a comprehensive database with patient or customer information, accessible to authorized personnel within the organization. Following the registration of a new user under the organization's name, they gain access to a comprehensive list of all available patients or customers. Through a simple click, users can effortlessly navigate to the designated locations, streamlining and optimizing the hospice care workflow."}
             </p>
 
             <div className="flex gap-[5px]">
