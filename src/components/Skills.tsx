@@ -280,6 +280,21 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
             <p className="text-center">{"C#"}</p>
           </a>
 
+          <a
+            key={1}
+            href={"https://www.arduino.cc/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="item flex flex-col items-center justify-around group"
+          >
+            <img
+              className="w-[60px] h-[60px] transition duration-300 group-hover:scale-110"
+              src={"https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Farduino.svg&w=50&h=50"}
+              alt=""
+            />
+            <p className="text-center">{"Arduino"}</p>
+          </a>
+
 
       </div>
     </div>
