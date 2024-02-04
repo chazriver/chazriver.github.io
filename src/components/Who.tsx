@@ -20,15 +20,11 @@ const Who: FC = () => {
 
         {/* Hide my age :v */}
         <p data-scroll className="text-lg text-gray-200" id="story">
-        Greetings, my name is Chaz and a software eningeer! My journey into software began at the age of 13, where I began my skills by crafting tools and scripts. Over the years, I have spearheaded numerous projects, collaborated in diverse team environments, and played a pivotal roles in developing robust backend solutions during my tenure in the U.S. Air Force.
-        <br>
+        {'Greetings! I&apos;m Chaz Hampton, a software eningeer currently based in Las Vegas, Nevada. My journey into software development began at the age of 13, where I honed my skills by crafting tools and scripts. Over the years, I&apos;ve spearheaded numerous projects, collaborated in diverse team environments, and played a pivotal role in developing robust backend solutions during my tenure in the U.S. Air Force.'}
         <br></br>
-        </br>
-        My passion lies in addressing real-world challenges through the creation of impactful and innovative products. While I possess comprehensive expertise in full-stack web development, my primary focus and dedication revolve around the intricate realm of IOT and mobile development.
-        <br>
+        My passion lies in addressing real-world challenges through the creation of impactful and innovative products. While I possess comprehensive expertise in full-stack web development, my primary focus and dedication revolve around the intricate realm of mobile development.
         <br></br>
-        </br>
-        Beyond the code, I find fulfillment in leisure activities such as gaming on my PS5, listening to music, kayaking, and fostering meaningful connections with friends. I am committed to leveraging my extensive skill set and experiences to contribute significantly to the ever-evolving landscape of software development. 
+        Beyond the code, I find fulfillment in leisure activities such as gaming on my PS5, indulging in musical pursuits, navigating waters through kayaking, and fostering meaningful connections with friends. I am committed to leveraging my extensive skill set and experiences to contribute significantly to the ever-evolving landscape of mobile application development. 
         </p>
       </div>
     </div>
