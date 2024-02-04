@@ -20,7 +20,7 @@ const Who: FC = () => {
 
         {/* Hide my age :v */}
         <p data-scroll className="text-lg text-gray-200" id="story">
-        {'Greetings! My name is Chaz Hampton, I a software eningeer currently based in Las Vegas, Nevada. My journey into software development began at the age of 13, where I honed my skills by crafting tools and scripts. Over the years, I have excelled in numerous projects, collaborated in diverse team environments, and played a pivotal role in developing robust backend solutions during my tenure in the U.S. Air Force.'}
+        Greetings! My name is Chaz Hampton, I a software eningeer currently based in Las Vegas, Nevada. My journey into software development began at the age of 13, where I honed my skills by crafting tools and scripts. Over the years, I have excelled in numerous projects, collaborated in diverse team environments, and played a pivotal role in developing robust backend solutions during my tenure in the U.S. Air Force.
         <br></br>
         My passion lies in addressing real-world challenges through the creation of impactful and innovative products. While I possess comprehensive expertise in full-stack web development, my primary focus and dedication revolve around the intricate realm of mobile development.
         <br></br>
