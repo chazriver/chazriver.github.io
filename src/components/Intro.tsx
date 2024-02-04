@@ -49,7 +49,7 @@ const Intro: FC = () => {
           Chaz Hampton
         </h1>
         <br></br>
-        {`Software Engineer - Portfolio`}
+        {`Software Engineer`}
       </m.p>
 
       <m.a
