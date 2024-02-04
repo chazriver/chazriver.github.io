@@ -28,7 +28,7 @@ const Who: FC = () => {
         <br>
         <br></br>
         </br>
-        Beyond the code, I find fulfillment in leisure activities such as gaming on my PS5, listening to music, kayaking, and fostering meaningful connections with friends. I am committed to leveraging my extensive skill set and experiences to contribute significantly to the ever-evolving landscape of computing. 
+        Beyond the code, I find fulfillment in leisure activities such as gaming on my PS5, listening to music, kayaking, and fostering meaningful connections with friends. I am committed to leveraging my extensive skill set and experiences to contribute significantly to the ever-evolving landscape of software development. 
         </p>
       </div>
     </div>
