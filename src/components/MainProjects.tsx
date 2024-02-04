@@ -47,7 +47,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
 
             <div className="flex mt-[25px] gap-[20px]">
               <a
-                href={"./SharkSafeAI_Embedded_Aerial_System.pdf"}// Host paper on site f/ download link
+                href={""}// Host paper on site f/ download link "./SharkSafeAI_Embedded_Aerial_System.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-[45px] px-[15px] text-white rounded transition duration-300 flex items-center gap-[10px] bg-[#1876d2] hover:bg-[#2884e0]"
