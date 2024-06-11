@@ -26,6 +26,24 @@ const SmallProjects: FC<SmallProjectsProps> = ({ projects }) => {
           >
             <img
               className="h-[40px] w-[40px] my-1 object-cover"
+              src={'/bloomberg.png'}
+              alt=""
+            />
+            <div>
+              <h1>Bloomberg L.P.</h1>
+              <p className="text-gray-400">{'Software Engineer Intern'}</p>
+            </div>
+          </a>
+
+          <a
+            href={''}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-3 hover:bg-slate-900 p-3 transition duration-300"
+            key={1}
+          >
+            <img
+              className="h-[40px] w-[40px] my-1 object-cover"
               src={'/usaf.png'}
               alt=""
             />
@@ -72,24 +90,6 @@ const SmallProjects: FC<SmallProjectsProps> = ({ projects }) => {
               <p className="text-gray-400">
                 {'Instructional Associate, Software Engineering'}
               </p>
-            </div>
-          </a>
-
-          <a
-            href={''}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-3 hover:bg-slate-900 p-3 transition duration-300"
-            key={1}
-          >
-            <img
-              className="h-[40px] w-[40px] my-1 object-cover"
-              src={'/bloomberg.png'}
-              alt=""
-            />
-            <div>
-              <h1>Bloomberg L.P.</h1>
-              <p className="text-gray-400">{'Software Engineer Intern'}</p>
             </div>
           </a>
         </div>
