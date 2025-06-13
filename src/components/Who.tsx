@@ -10,7 +10,7 @@ const Who: FC = () => {
         data-scroll
         data-scroll-speed="2"
         className="w-[225px] h-[225px] rounded-full"
-        src="/avatar.jpg"
+        src="/avatar.png"
         alt=""
       />
       <div>
